@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 const app = express();
 const mongoose = require('mongoose');
-const expressEjsLayout = require('express-ejs-layouts')
+const expressEjsLayout = require('express-ejs-layouts');
 
 //mongoose
-mongoose.connect('mongodb+srv://quentin:quentin@devops.dzjg9.mongodb.net/<dbname>?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology : true})
+mongoose.connect('mongodb://localhost/test',{useNewUrlParser: true, useUnifiedTopology : true})
 .then(() => console.log('connected,,'))
 .catch((err)=> console.log(err));
 //EJS
